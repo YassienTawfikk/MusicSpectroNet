@@ -32,7 +32,7 @@ MusicSpectroNet/
 │   │   └── features_30_sec.csv
 │   │
 │   ├── processed/
-│   │       └── images_128x128/
+│   │       └── spectrogram/
 │   │          ├── blues/
 │   │          ├── classical/
 │   │          ├── country/
@@ -44,19 +44,20 @@ MusicSpectroNet/
 │   │                   └── rock00099.png
 │   │
 │   └──curated/
-│           ├── test/
-│           │       ├── blues/
-│           │       ├── classical/
-│           │       ├── country/
-│           │       ├── ...
-│           │       └── rock/
-│           │
-│           └── train/
-│                   ├── blues/
-│                   ├── classical/
-│                   ├── country/
-│                   ├── ...
-│                   └── rock/
+│           └── spectrogram/
+│                       ├── test/
+│                       │       ├── blues/
+│                       │       ├── classical/
+│                       │       ├── country/
+│                       │       ├── ...
+│                       │       └── rock/
+│                       │
+│                       └── train/
+│                               ├── blues/
+│                               ├── classical/
+│                               ├── country/
+│                               ├── ...
+│                               └── rock/
 │
 ├── notebooks/
 │   ├── 00_init.ipynb
