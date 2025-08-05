@@ -12,26 +12,34 @@ import kagglehub
 
 
 def download_dataset():
+    # List of files to check
     data_items = [
-        raw_data_dir / "features.csv",
-        raw_data_dir / "stores.csv",
-        raw_data_dir / "test.csv",
-        raw_data_dir / "train.csv"
+        raw_data_dir / "features_3_sec.csv",
+        raw_data_dir / "features_30_sec.csv",
+        raw_data_dir / "genres_original",
+        raw_data_dir / "images_original",
     ]
 
+    # Check and download
     if all(item.exists() for item in data_items):
-        print("✔️ Data already downloaded")
+        print("✔️ Dataset is already downloaded.")
     else:
-        dataset_path = Path(kagglehub.dataset_download("aslanahmedov/walmart-sales-forecast"))
+
+        # Download dataset
+        dataset_path = Path(kagglehub.dataset_download("andradaolteanu/gtzan-dataset-music-genre-classification"))
 
         if not dataset_path.exists():
-            raise FileNotFoundError("Dataset not found")
+            raise FileNotFoundError("⚠️ Dataset not found.")
 
+        # Copy files to raw_data_dir
         for item in dataset_path.iterdir():
             target = raw_data_dir / item.name
-            shutil.copy2(item, target)
+            if item.is_file():
+                shutil.copy2(item, target)
+            elif item.is_dir():
+                shutil.copytree(item, target, dirs_exist_ok=True)
 
-        print("✔️ Data downloaded successfully")
+        print("✔️ Dataset successfully downloaded.")
 
 
 def load_dataset(file_name):
