@@ -5,15 +5,58 @@ MusicSpectroNet/
 │
 ├── data/
 │   ├── raw/
-│   │   ├──
-│   │   └──
+│   │   ├── genres_original/
+│   │   │           ├── blues/
+│   │   │           │       ├── blues.00000.wav
+│   │   │           │       ├── blues.00001.wav
+│   │   │           │       ├── ...
+│   │   │           │       └── blues.00099.wav
+│   │   │           │
+│   │   │           ├── classical/
+│   │   │           ├── country/
+│   │   │           ├── ...
+│   │   │           └── rock/
+│   │   │
+│   │   ├── images_original/
+│   │   │           ├── blues/
+│   │   │           ├── classical/
+│   │   │           ├── country/
+│   │   │           ├── ...
+│   │   │           └── rock/
+│   │   │                   ├── rock00000.png
+│   │   │                   ├── rock00001.png
+│   │   │                   ├── ...
+│   │   │                   └── rock00099.png
+│   │   │
+│   │   ├── features_3_sec.csv
+│   │   └── features_30_sec.csv
 │   │
 │   ├── processed/
-│   │   └──
+│   │       └── images_128x128/
+│   │          ├── blues/
+│   │          ├── classical/
+│   │          ├── country/
+│   │          ├── ...
+│   │          └── rock/
+│   │                   ├── rock00000.png
+│   │                   ├── rock00001.png
+│   │                   ├── ...
+│   │                   └── rock00099.png
 │   │
-│   └──raw/
-│       ├──
-│       └──
+│   └──curated/
+│           ├── test/
+│           │       ├── blues/
+│           │       ├── classical/
+│           │       ├── country/
+│           │       ├── ...
+│           │       └── rock/
+│           │
+│           └── train/
+│                   ├── blues/
+│                   ├── classical/
+│                   ├── country/
+│                   ├── ...
+│                   └── rock/
 │
 ├── notebooks/
 │   ├── 00_init.ipynb
