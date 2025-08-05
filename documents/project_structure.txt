@@ -52,6 +52,13 @@ MusicSpectroNet/
 │                       │       ├── ...
 │                       │       └── rock/
 │                       │
+│                       ├── validation/
+│                       │       ├── blues/
+│                       │       ├── classical/
+│                       │       ├── country/
+│                       │       ├── ...
+│                       │       └── rock/
+│                       │
 │                       └── train/
 │                               ├── blues/
 │                               ├── classical/

@@ -23,10 +23,11 @@ raw_data_dir = data_dir / "raw"
 processed_data_dir = data_dir / "processed"
 processed_spectrogram_dir = processed_data_dir / "spectrogram"
 
-# Processed Data Directories
+# Curated Data Directories
 curated_data_dir = data_dir / "curated"
 curated_spectrogram_dir = curated_data_dir / "spectrogram"
 train_dir = curated_spectrogram_dir / "train"
+validation_dir = curated_spectrogram_dir / "validation"
 test_dir = curated_spectrogram_dir / "test"
 
 # Output Directories
@@ -36,5 +37,5 @@ figures_dir = output_dir / "figures"
 docs_dir = output_dir / "docs"
 
 # Directories List
-data_dir_list = [raw_data_dir, processed_spectrogram_dir, train_dir, test_dir]
+data_dir_list = [raw_data_dir, processed_spectrogram_dir, train_dir, test_dir, validation_dir]
 output_dir_list = [model_dir, figures_dir, docs_dir]
