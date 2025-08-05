@@ -17,7 +17,10 @@ base_dir = get_base_dir()
 data_dir = base_dir / "data"
 raw_data_dir = data_dir / "raw"
 processed_data_dir = data_dir / "processed"
+processed_image_dir = processed_data_dir / "images_128x128"
 curated_data_dir = data_dir / "curated"
+train_dir = curated_data_dir / "train"
+test_dir = curated_data_dir / "test"
 
 # Output Directories
 output_dir = base_dir / "outputs"
@@ -26,5 +29,5 @@ figures_dir = output_dir / "figures"
 docs_dir = output_dir / "docs"
 
 # Directories List
-data_dir_list = [raw_data_dir, processed_data_dir, curated_data_dir]
+data_dir_list = [raw_data_dir, processed_image_dir, train_dir, test_dir]
 output_dir_list = [model_dir, figures_dir, docs_dir]
