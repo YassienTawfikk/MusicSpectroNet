@@ -1,6 +1,11 @@
 # MusicSpectroNet
 
+
 > GTZAN Genre Classification Using Tabular ML and CNN Architectures
+
+<p align='center'>
+   <img width="800" alt="20250808_2111_MusicSpectroNet Poster_simple_compose_01k25e2jdweta9vj2y020y8z46" src="https://github.com/user-attachments/assets/9c70cda3-dd4a-4f54-9557-af484d182792" />
+</p>
 
 ---
 
@@ -59,13 +64,14 @@ We explored both approaches:
 
 > Confusion matrix visualizations are saved under `outputs/figures/`
 
+
 ### Performance Insights
 
 We saved and visualized both confusion matrices and feature importances:
 
-| Confusion Matrix (CNN) | Confusion Matrix (XGBoost) |
+| Confusion Matrix (XGBoost) | Confusion Matrix (CNN) |
 | ---------------------- | -------------------------- |
-|                        |                            |
+| <img width="640" height="480" alt="xgboost_confusion_matrix" src="https://github.com/user-attachments/assets/d7038408-1297-4db0-86dc-1ee810b952f7" /> | <img width="640" height="480" alt="cnn_confusion_matrix" src="https://github.com/user-attachments/assets/2db6c7f4-56aa-4ea4-96c3-2cf9e9fee4a7" /> |
 
 ---
 
