@@ -1,16 +1,22 @@
 # Core Libraries
 numpy==1.26.4
-pandas==2.2.2
-scipy==1.13.0
+pandas==2.3.0
 
 # Visualization
-matplotlib==3.8.4
+matplotlib==3.10.3
+seaborn==0.13.2
+pillow==11.2.1
 
 # Machine Learning
-scikit-learn==1.4.2
-xgboost==2.0.3
-shap==0.45.0
+scikit-learn==1.6.1
+xgboost==3.0.3
+shap==0.45.1
+
+# Deep Learning (CNN)
+torch==2.7.1
+torchvision==0.22.1
+torchaudio==2.7.1
 
 # Utilities
-joblib==1.3.2
-kagglehub==0.1.15
+joblib==1.4.2
+kagglehub==0.3.12
