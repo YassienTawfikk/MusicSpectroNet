@@ -32,7 +32,9 @@ MusicSpectroNet/
 │   │   └── features_30_sec.csv
 │   │
 │   ├── processed/
-│   │       ├── tabular_processed.csv
+│   │       ├──tabular/
+│   │       │  ├── gtzan_label_mapping_3_sec.csv
+│   │       │  └── gtzan_tabular_3_sec.csv
 │   │       │
 │   │       └── spectrogram/
 │   │          ├── blues/
