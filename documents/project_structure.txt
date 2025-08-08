@@ -76,27 +76,32 @@ MusicSpectroNet/
 │
 ├── notebooks/
 │   ├── 00_init.ipynb
-│   ├── 01_data_exploration.ipynb
-│   └──
+│   ├── 0001_data_exploration.ipynb
+│   ├── 0002_model_training.ipynb.ipynb
+│   ├── 0003_model_evaluation.ipynb
+│   ├── 0101_data_exploration.ipynb
+│   ├── 0102_model_training.ipynb
+│   └── 0103_model_evaluation.ipynb
 │
 ├── src/                                    # Python scripts for modular implementation
 │   ├── __init__.py
 │   ├── __00__paths.py
-│   ├── __01__data_setup.py
-│   └──
+│   ├── __01_data_setup.py
+│   └── __02__model_creation.py
 │
 ├── outputs/                             # Python scripts for modular implementation
 │   ├── model/
-│   │   ├──
-│   │   └──
+│   │   ├── genre_cnn_model.pth
+│   │   └── xgboost_gtzan_model.pkl
 │   │
 │   ├── figures/
-│   │   ├──
-│   │   └──
+│   │   ├── cnn_confusion_matrix.png
+│   │   ├── xgboost_confusion_matrix.png
+│   │   └── xgboost_feature_importance.png
 │   │
 │   └── docs/
-│       ├──
-│       └──
+│       ├── cnn_classification_report.txt
+│       └── xgboost_classification_report.txt
 │
 ├── main.py                          # CLI or orchestrator for full training/eval
 ├── README.md                        # Full description, instructions, results
