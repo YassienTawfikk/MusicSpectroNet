@@ -4,7 +4,7 @@
 > GTZAN Genre Classification Using Tabular ML and CNN Architectures
 
 <p align='center'>
-   <img width="800" alt="20250808_2111_MusicSpectroNet Poster_simple_compose_01k25e2jdweta9vj2y020y8z46" src="https://github.com/user-attachments/assets/9c70cda3-dd4a-4f54-9557-af484d182792" />
+   <img width="500" alt="20250808_2111_MusicSpectroNet Poster_simple_compose_01k25e2jdweta9vj2y020y8z46" src="https://github.com/user-attachments/assets/9c70cda3-dd4a-4f54-9557-af484d182792" />
 </p>
 
 ---
