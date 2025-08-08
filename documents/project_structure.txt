@@ -32,6 +32,8 @@ MusicSpectroNet/
 │   │   └── features_30_sec.csv
 │   │
 │   ├── processed/
+│   │       ├── tabular_processed.csv
+│   │       │
 │   │       └── spectrogram/
 │   │          ├── blues/
 │   │          ├── classical/
@@ -44,6 +46,10 @@ MusicSpectroNet/
 │   │                   └── rock00099.png
 │   │
 │   └──curated/
+│           ├── Tabular/
+│           │  ├── train.csv
+│           │  └── test.csv
+│           │
 │           └── spectrogram/
 │                       ├── test/
 │                       │       ├── blues/
