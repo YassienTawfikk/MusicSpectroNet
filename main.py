@@ -1,6 +1,6 @@
 from src.__00__paths import raw_data_dir, curated_tabular_dir, processed_tabular_dir, model_dir
-from src.__01_data_setup import *
-from src.__02__model_creation import *
+from src.__01_data_setup import load_dataset, data_preprocessing, save_dataset, split_dataset, download_dataset
+from src.__02__model_creation import save_model, setup_model, train_model
 
 
 def main():
