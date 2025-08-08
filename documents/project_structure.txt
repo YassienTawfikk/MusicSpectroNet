@@ -32,6 +32,10 @@ MusicSpectroNet/
 │   │   └── features_30_sec.csv
 │   │
 │   ├── processed/
+│   │       ├──tabular/
+│   │       │  ├── gtzan_label_mapping_3_sec.csv
+│   │       │  └── gtzan_tabular_3_sec.csv
+│   │       │
 │   │       └── spectrogram/
 │   │          ├── blues/
 │   │          ├── classical/
@@ -44,6 +48,10 @@ MusicSpectroNet/
 │   │                   └── rock00099.png
 │   │
 │   └──curated/
+│           ├── Tabular/
+│           │  ├── train.csv
+│           │  └── test.csv
+│           │
 │           └── spectrogram/
 │                       ├── test/
 │                       │       ├── blues/
