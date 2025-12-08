@@ -1,15 +1,12 @@
 from pathlib import Path
 
-from scipy.signal import spectrogram
-
-
 def get_base_dir():
-    """Return the project root by locating the top-level directory containing 'src'."""
+    """Return the project root by locating the top-level directory containing 'spectronet'."""
     here = Path().resolve()
     for parent in [here] + list(here.parents):
-        if (parent / "src").is_dir():
+        if (parent / "spectronet").is_dir():
             return parent
-    raise RuntimeError("Project root not found — 'src/' directory is missing.")
+    raise RuntimeError("Project root not found — 'spectronet/' directory is missing.")
 
 
 # Project Base Directory

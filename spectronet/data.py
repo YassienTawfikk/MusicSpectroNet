@@ -1,16 +1,15 @@
 # Data Handling
 import pandas as pd
 import numpy as np
-
-# Paths
-from src.__00__paths import curated_data_dir, processed_data_dir, raw_data_dir
 import shutil
 from pathlib import Path
 from sklearn.preprocessing import LabelEncoder
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.model_selection import train_test_split
-# Datasets Source
 import kagglehub
+
+# Paths
+from spectronet.paths import curated_data_dir, processed_data_dir, raw_data_dir
 
 
 def download_dataset():
@@ -36,6 +35,8 @@ def download_dataset():
         data_root = dataset_path / "Data" if (dataset_path / "Data").exists() else dataset_path
 
         # Copy files/folders to raw_data_dir
+        raw_data_dir.mkdir(parents=True, exist_ok=True) # Ensure raw dir exists
+
         for item in data_root.iterdir():
             target = raw_data_dir / item.name
             if item.is_file():
@@ -88,4 +89,6 @@ def load_dataset(file_name):
 
 
 def save_dataset(df, file_name, index=False):
+    file_name = Path(file_name)
+    file_name.parent.mkdir(parents=True, exist_ok=True)
     pd.DataFrame(df).to_csv(file_name, index=index)

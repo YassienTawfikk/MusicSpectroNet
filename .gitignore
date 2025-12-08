@@ -9,3 +9,4 @@
 *.pkl
 *.joblib
 .env
+logs/

@@ -1,6 +1,5 @@
 # MusicSpectroNet
 
-
 > GTZAN Genre Classification Using Tabular ML and CNN Architectures
 
 <p align='center'>
@@ -64,7 +63,6 @@ We explored both approaches:
 
 > Confusion matrix visualizations are saved under `outputs/figures/`
 
-
 ### Performance Insights
 
 We saved and visualized both confusion matrices and feature importances:
@@ -109,35 +107,29 @@ MusicSpectroNet/
 │   └── project_structure.txt
 │
 ├── data/
-│   ├── raw/
-│   │   ├── genres_original/                    # 99 sample per Genre
-│   │   ├── images_original/
-│   │   ├── features_3_sec.csv
-│   │   └── features_30_sec.csv
-│   │
-│   ├── processed/
-│   │       ├──tabular/
-│   │       └── spectrogram/
-│   └──curated/
-├── notebooks/
-│   ├── 00_init.ipynb
-│   ├── 0001_data_exploration.ipynb
-│   ├── 0002_model_training.ipynb.ipynb
-│   ├── 0003_model_evaluation.ipynb
-│   ├── 0101_data_exploration.ipynb
-│   ├── 0102_model_training.ipynb
-│   └── 0103_model_evaluation.ipynb
+│   ├── raw/                   # Raw datasets
+│   ├── processed/             # Processed features/labels
+│   └── curated/               # Final train/test splits
 │
-├── src/                                    # Python scripts for modular implementation
-├── outputs/                             # Python scripts for modular implementation
-│   ├── model/
-│   │   ├── genre_cnn_model.pth
-│   │   └── xgboost_gtzan_model.pkl
+├── spectronet/                # Main package
+│   ├── __init__.py
+│   ├── data.py                # Data loading and preprocessing
+│   ├── models.py              # Model definitions (CNN & XGBoost)
+│   └── paths.py               # Path configurations
+│
+├── scripts/
+│   └── training.py            # CLI entry point for training
+│
+├── run/
+│   └── train.sh               # SLURM-compatible launch script
+│
+├── outputs/
+│   ├── models/
 │   ├── figures/
 │   └── docs/
-├── main.py                          # Fast running for XGBoost Model Creation
-├── README.md                        # Full description, instructions, results
-├── requirements.txt                 # Python dependencies
+│
+├── README.md                  # Project documentation
+├── requirements.txt           # Dependencies
 └── .gitignore
 ```
 
@@ -151,12 +143,23 @@ MusicSpectroNet/
    pip install -r requirements.txt
    ```
 
-2. Run `main.py` to train and save the XGBoost model directly.
+2. Run the training pipeline via the convenience script:
 
-3. Alternatively, explore the full workflow:
+   ```bash
+   bash run/train.sh
+   ```
 
-   * `000*.ipynb` notebooks: for CNN model (spectrogram-based)
-   * `010*.ipynb` notebooks: for Tabular XGBoost model
+   This script handles the environment setup and launches the training CLI.
+
+3. Alternatively, run the CLI directly:
+
+   ```bash
+   export PYTHONPATH=$PYTHONPATH:.
+   python scripts/training.py fit \
+      --n_estimators=1000 \
+      --learning_rate=0.05 \
+      --max_depth=6
+   ```
 
 ---
 

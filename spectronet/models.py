@@ -9,7 +9,7 @@ from xgboost import XGBClassifier
 import joblib
 
 # Local Modules
-from src.__00__paths import model_dir
+from spectronet.paths import model_dir
 
 
 class ChannelAttention(nn.Module):
@@ -87,12 +87,17 @@ class GenreSpectrogramDataset(Dataset):
         return image, label
 
 
-def save_model(model, file_name=model_dir / "genre_cnn_model.pth"):
+def save_model(model, file_name=None):
+    if file_name is None:
+        file_name = model_dir / "genre_cnn_model.pth"
+    
+    file_name = Path(file_name)
+    file_name.parent.mkdir(parents=True, exist_ok=True)
     joblib.dump(model, file_name)
-    print(f"✔️ Model Saved at {'/'.join(file_name.parts[-2:])}")
+    print(f"✔️ Model Saved at {file_name}")
 
 
-def setup_model(n_estimators=1000, learning_rate=0.05, max_depth=6, num_class=10):
+def setup_xgb(n_estimators=1000, learning_rate=0.05, max_depth=6, num_class=10):
     model = XGBClassifier(
         n_estimators=n_estimators,
         learning_rate=learning_rate,
